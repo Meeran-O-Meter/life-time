@@ -28,12 +28,21 @@ body{
     font-family: 'DinCondensedBold';
     src: url(./fonts/din-condensed-bold.ttf);
 }
+
+.hero-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
 .input{
     border: #DBD1BC 2px solid;
     border-radius: 8px;
     max-width: 550px;
-    width: 100%;
-    font-size: 2.5rem;
+    width: 30%;
+    font-size: calc(1vw + 1rem);
     text-align: center;
     padding: 0.3rem 0.5rem;
 }
@@ -56,6 +65,7 @@ body{
     justify-content: center;
     flex-direction: column;
     gap: 1rem;
+    width: 100%;
 }
 
 .logo{
@@ -64,9 +74,14 @@ body{
     justify-content: center;
     gap: 0.1rem;
     color: #E0CBA1;
-    font-size: 4rem;
+    font-size: calc(3vw + 1rem);
+    margin-bottom: 1rem;
 }
 
+.logo-img{
+    width: 8vw;
+    padding-top: 1rem;
+}
 .logo-img, .logo-text{
     white-space: nowrap;
     flex-shrink: 0;
@@ -77,4 +92,43 @@ body{
     font-family: 'DinCondensedBold';
     white-space: nowrap;
     flex-shrink: 0;
+}
+
+.instruction{
+    color: #DACACA;
+    font-family: 'JetBrains';
+    text-align: center;
+    font-size: calc(0.5vw + 1rem);
+    margin: 1rem;
+}
+
+.submit-button{
+    border: none;
+    border-radius: 8px;
+    color: #262626;
+    font-weight: bold;
+    background-color: #FABD3E;
+    font-family: 'JetBrains';
+    font-size: calc(0.1vw + 1rem);
+    padding: 0.5rem 1.8rem;
+    text-align: center;
+    transition: transform 0.1s ease, background-color 0.2s ease;
+    cursor: pointer;
+}
+    
+.submit-button:hover{
+    background-color: #f2bc3f;  
+}
+
+.submit-button:active {
+    transform: scale(0.96);
+}
+
+.controls-row{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 550px;
+    align-items: center;
 }
