@@ -3,29 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <script src="./script.js"></script>
     <title>LifeTime</title>
 </head>
 <body>
-    <div class="hero-container">
-        <div class="logo">
-            <img class="logo-img" src="./assets/logo.svg" alt="LifeTime Logo">
-            <p class="logo-text">LIFE-TIME</p>
-            <img class="logo-img" src="./assets/logo.svg" alt="LifeTime Logo">
-        </div>
-        <p class="instruction">Enter your birth date and time </p>
-        <div class="input-block">
-            <input class="input" type="text" placeholder="25 March 2011">
-            <input class="input" type="text" placeholder="05:55">
-        </div>
-
-        <div class="controls-row">
-            <button class="submit-button">Submit</button>
-        </div>
-        
-
-    </div>
+    <form>
+        <input type="text" id="birthdateInput">
+        <input type="text" id="birthtimeInput">
+        <button type="button" id="toggleButton"></button>
+        <button type="submit">Submit</button>
+        <p>Output</p>
+    </form>
+    
+    <h1>LifeTime</h1>
     
 </body>
 </html>

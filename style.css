@@ -35,28 +35,33 @@ body{
     justify-content: center;
     align-items: center;
     width: 100%;
+    container-type: inline-size;
 }
 
 .input{
     border: #DBD1BC 2px solid;
     border-radius: 8px;
     max-width: 550px;
-    width: 30%;
+    width: 40%;
     font-size: calc(1vw + 1rem);
     text-align: center;
-    padding: 0.3rem 0.5rem;
+    padding: 0.8rem 0.2rem;
+    font-family: 'DinCondensed';
 }
 
 .input::placeholder{
     color: #DBD1BC;
-    opacity: 0.3;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .input:focus{
     outline: none;
     border-color: #E0CBA1;
     transition: all 0.2s ease-in-out;
+}
 
+.input:focus::placeholder{
+    opacity: 0.3
 }
 
 .input-block{
@@ -99,7 +104,10 @@ body{
     font-family: 'JetBrains';
     text-align: center;
     font-size: calc(0.5vw + 1rem);
-    margin: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    white-space: nowrap;
+    font-size: 2.2cqw;
 }
 
 .submit-button{
@@ -131,4 +139,18 @@ body{
     width: 100%;
     max-width: 550px;
     align-items: center;
+}
+
+.toggle-switch{
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    border: 2px #FABD3E solid;
+    fill: none;
+    border-radius: 9999px;
+    cursor: pointer;    
+    align-items: center;
+    user-select: none;
+    width: clamp(4.5rem, 5vw, 5rem);
+    height: calc(0.9vw + 2rem);
 }
