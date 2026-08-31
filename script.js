@@ -19,10 +19,12 @@ form.addEventListener("submit", (event) => {
     //Collecting Input Data
     event.preventDefault();
 
+    form.style.display = "none";
+
     if (liveTimer){
         clearInterval(liveTimer)
     };
-    
+
     birthdateValue = document.getElementById("birthdateInput").value;
     birthtimeValue = document.getElementById("birthtimeInput").value;
     
