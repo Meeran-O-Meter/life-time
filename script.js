@@ -1,6 +1,7 @@
 const toggleButton = document.getElementById("toggleButton");
 const form = document.getElementById("form");
 let amPm = false;
+let liveTimer = null;
 
 toggleButton.addEventListener("click", () => {
     amPm = !amPm;
@@ -17,12 +18,19 @@ form.addEventListener("submit", (event) => {
 
     //Collecting Input Data
     event.preventDefault();
+
+    if (liveTimer){
+        clearInterval(liveTimer)
+    };
+    
     birthdateValue = document.getElementById("birthdateInput").value;
     birthtimeValue = document.getElementById("birthtimeInput").value;
+    
+    //Splitting birthtime into integer values
     const birthtimeArrayText = birthtimeValue.split(":");
     const birthtimeArray = birthtimeArrayText.map(Number);
-    hours = birthtimeArray[0];
-    minutes = birthtimeArray[1];
+    let hours = birthtimeArray[0];
+    const minutes = birthtimeArray[1];
 
 
     //12 Hour Conversion
@@ -34,23 +42,37 @@ form.addEventListener("submit", (event) => {
         hours = 0;
     };
 
-    console.log(hours, minutes);
-
     //Date Conversion
-    birthdateArray = birthdateValue.split(" ");
-    monthText = birthdateArray[1];
-    day = Number(birthdateArray[0]);
-    year = Number(birthdateArray[2]);
+    const birthdateArray = birthdateValue.split(" ");
+    const monthText = birthdateArray[1];
+    const day = Number(birthdateArray[0]);
+    const year = Number(birthdateArray[2]);
 
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    month = months.findIndex(m => m.toLowerCase() === monthText?.toLowerCase());
-
-    console.log(month,year, day)
-
+    const month = months.findIndex(m => m.toLowerCase() === monthText?.toLowerCase());
 
     //Constructing Final Date
     const birthDate = new Date (year, month, day, hours, minutes);
-    console.log(birthDate)
+
+    liveTimer = setInterval(() => {
+        const now = new Date();
+        const timeElapsed = now - birthDate;
+
+        //Rouding and calculating final time in different units
+        const finalHours = Math.floor((timeElapsed / 3600000));
+        const finalMinutes = Math.floor((timeElapsed / 60000) % 60)
+        const finalSeconds = Math.floor(timeElapsed/(1000) % 60 );  
+
+        //Adding an extra zero to give it a stopwatch look
+        const formattedFinalHours = String(finalHours).padStart(2, 0);
+        const formattedFinalMinutes = String(finalMinutes).padStart(2,0);
+        const formattedFinalSeconds = String(finalSeconds).padStart(2,0);
+
+        //AHHHH OUTPUTTING FINAL VALUES FINALLYYY
+        document.getElementById("hours").textContent = formattedFinalHours;
+        document.getElementById("minutes").textContent = formattedFinalMinutes;
+        document.getElementById("seconds").textContent = formattedFinalSeconds;
+
+    }, 1000);
+
 });
-
-
