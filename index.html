@@ -13,24 +13,30 @@
         <h1 class="title">LIFE-TIME</h1>
         <img class="logo-icon" src="./assets/logo.svg"></img> 
     </div>
+    
+    <div class="form-container">
+        <form id="form">
 
-    <form id="form">
-        <input type="text" id="birthdateInput">
-        <input type="text" id="birthtimeInput">
-        <button type="button" id="toggleButton">AM</button>
-        <button type="submit">Submit</button>
-    </form>
+            <p class="instructions">Enter your birth date and time</p>
+            <input type="text" id="birthdateInput">
+            <input type="text" id="birthtimeInput">
+            <button type="button" id="toggleButton">AM</button>
+            <button type="submit">Submit</button>
+        </form>
 
-    <div class="time-container"></div>
-        <span id="hours">00</span>:
-        <span id="minutes">00</span>:
-        <span id="seconds">00</span>
+        <div class="time-container"></div>
+            <span id="hours">00</span>:
+            <span id="minutes">00</span>:
+            <span id="seconds">00</span>
+        </div>
+
+        <div id="success-container">
+            <img class="success-img" src="./assets/success-svg.svg">
+            <p class="success-text">Success!</p>
+        </div>
+
     </div>
 
-    <div id="success-container">
-        <img class="success-img" src="./assets/success-svg.svg">
-        <p class="success-text">Success!</p>
-    </div>
     
 </body>
 </html>

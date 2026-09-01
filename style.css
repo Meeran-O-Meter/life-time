@@ -1,10 +1,11 @@
 *{
-    background-color: #1E1E1E;
+    background-color: #191919;
     color: #DBD1BC;
+    padding: 0;
+    margin: 0;
 }
 
 body{
-    padding-top: 5vw;
     align-content: center;
 }
 
@@ -28,7 +29,6 @@ body{
     gap: 5px;
     font-family: 'DinCondensed';
     color: #E0CBA1;
-    font-size: calc(1vw + 0.8rem);
     width: 50%;
     margin: auto;
     justify-content: center;
@@ -41,6 +41,26 @@ body{
 }
 
 .title{
+    font-size: calc(2.5vw + 1rem);
     color:#E0CBA1 ;
+    white-space: nowrap;
 }
 
+/** Instructions and Input Bar Styling **/
+.form-container{
+    container-type: inline-size;
+    width: 50%;
+    border: #fff 5px solid;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.instructions {
+    color: #DACACA;
+    font-family: 'JetBrains';
+    font-weight: bold;
+    font-size: 4cqw;
+}
