@@ -16,7 +16,7 @@ body{
 
 @font-face{
     font-family: 'JetBrains';
-    src: url(./fonts/JetBrainsMono-Regular.ttf);
+    src: url(./fonts/JetBrainsMono-Medium.ttf);
 }
 
 @font-face{
@@ -91,4 +91,30 @@ body{
     line-height: normal;
 }
 
+.button-container{
+    width: 90%;
+    align-self: center;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 2vh;
+}
 
+.submit-button{
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #262626;
+    background-color: #FABD3E;
+    font-family: 'JetBrains';
+    text-align: center;
+    width: 20%;
+    width: fit-content;
+    padding: 0.8vw 3vw;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.submit-button:hover{
+    opacity: 0.9;
+}
