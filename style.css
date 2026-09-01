@@ -2,6 +2,12 @@
     background-color: #1E1E1E;
     color: #DBD1BC;
 }
+
+body{
+    padding-top: 5vw;
+    align-content: center;
+}
+
 @font-face {
     font-family: 'DinCondensed';
     src: url(./fonts/D-DINCondensed.otf);
@@ -16,3 +22,25 @@
     font-family: 'DinCondensedBold';
     src: url(./fonts/din-condensed-bold.ttf);
 }
+
+.logo-div{
+    display: flex;
+    gap: 5px;
+    font-family: 'DinCondensed';
+    color: #E0CBA1;
+    font-size: calc(1vw + 0.8rem);
+    width: 50%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-icon{
+    color: #E0CBA1;
+    height: calc(5vw + 0.8rem);
+}
+
+.title{
+    color:#E0CBA1 ;
+}
+
