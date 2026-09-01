@@ -18,8 +18,12 @@
         <form id="form">
 
             <p class="instructions">Enter your birth date and time</p>
-            <input type="text" id="birthdateInput">
-            <input type="text" id="birthtimeInput">
+
+            <div class="input-bars">
+                <input placeholder="..." class="input" type="text" id="birthdateInput">
+                <input placeholder="00:00" class="input" type="text" id="birthtimeInput">
+            </div>
+
             <button type="button" id="toggleButton">AM</button>
             <button type="submit">Submit</button>
         </form>
@@ -34,6 +38,8 @@
             <img class="success-img" src="./assets/success-svg.svg">
             <p class="success-text">Success!</p>
         </div>
+
+
 
     </div>
 

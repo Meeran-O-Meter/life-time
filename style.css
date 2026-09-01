@@ -50,7 +50,6 @@ body{
 .form-container{
     container-type: inline-size;
     width: 50%;
-    border: #fff 5px solid;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -61,6 +60,35 @@ body{
 .instructions {
     color: #DACACA;
     font-family: 'JetBrains';
-    font-weight: bold;
+    font-weight: 550;
     font-size: 4cqw;
 }
+
+.input-bars{
+    margin-top: 2vw;
+    display: grid;
+    place-items: center;
+    gap: 30px;
+}
+
+.input{
+    width: 90%;
+    border: 2px solid #DDDDDD;
+    color: #DBD1BC;
+    font-family: 'JetBrains';
+    outline: none;
+    height: calc(2vw + 0.8rem);
+    border-radius: 8px;
+    text-align: center;
+    line-height: normal;
+    padding: 1.5vh 0;
+    font-size: 1.5rem;
+}
+
+.input::placeholder{
+    font-size: 1.5rem;
+    opacity: 0.6;
+    line-height: normal;
+}
+
+
