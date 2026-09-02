@@ -12,6 +12,7 @@ toggleButton.addEventListener("click", () => {
         toggleButton.textContent = "AM"
     }
 
+    toggleButton.classList.toggle("is-pm", amPm)
 });
 
 form.addEventListener("submit", (event) => {
@@ -43,6 +44,8 @@ form.addEventListener("submit", (event) => {
     if (!amPm && (hours === 12)) {
         hours = 0;
     };
+
+
 
     //Date Conversion
     const birthdateArray = birthdateValue.split(" ");

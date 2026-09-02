@@ -16,7 +16,7 @@ body{
 
 @font-face{
     font-family: 'JetBrains';
-    src: url(./fonts/JetBrainsMono-Medium.ttf);
+    src: url(./fonts/JetBrainsMono-Regular.ttf);
 }
 
 @font-face{
@@ -91,6 +91,7 @@ body{
     line-height: normal;
 }
 
+
 .button-container{
     width: 90%;
     align-self: center;
@@ -98,6 +99,27 @@ body{
     justify-content: space-between;
     margin: auto;
     margin-top: 2vh;
+}
+
+.toggle-button{
+    width: 15%;
+    border: #FABD3E 2px solid;
+    border-radius: 999px;
+    color: #FABD3E;
+    font-style: 'JetBrains';
+    font-weight: 600;
+}
+
+.toggle-button:hover{
+    border: 3px solid #FABD3E;
+    cursor: pointer;
+}
+
+.toggle-button.is-pm{
+    border: none;
+    color: #191919;
+    background-color: #FABD3E;
+
 }
 
 .submit-button{
