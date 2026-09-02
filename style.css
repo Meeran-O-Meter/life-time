@@ -6,6 +6,7 @@
 }
 
 body{
+    padding-top: 10vh;
     align-content: center;
 }
 
@@ -86,7 +87,7 @@ body{
 }
 
 .input::placeholder{
-    font-size: 1.5rem;
+    font-size: calc(0.5vw + 0.8rem);
     opacity: 0.6;
     line-height: normal;
 }
