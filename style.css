@@ -131,13 +131,55 @@ body{
     background-color: #FABD3E;
     font-family: 'JetBrains';
     text-align: center;
-    width: 20%;
     width: fit-content;
-    padding: 0.8vw 3vw;
+    padding: 0.8vw 2.5vw;
     font-size: 1rem;
     cursor: pointer;
 }
 
 .submit-button:hover{
     opacity: 0.9;
+}
+
+
+.time-container{
+    display: none;
+    font-family: 'DinCondensed';
+    color: #DDDDDD;
+    font-size: 1.2rem;
+}
+
+.time{
+    color: #FABD3E;
+    font-family: 'JetBrains';
+    font-size: calc(3vw + 1rem);
+    margin-left: 1vw;
+    margin-right: 0.2rem;
+}
+
+.footer{
+    font-family: 'DinCondensed';
+    font-size: 1.2rem;    
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.warning-container{
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    font-family: 'DinCondensed';
+    font-size: 1.1rem;
+}
+
+.example{
+    margin-top: 0.2rem;
+    font-size: 1rem;
+    color: #a39f9f;
 }

@@ -21,6 +21,7 @@ form.addEventListener("submit", (event) => {
     event.preventDefault();
 
     form.style.display = "none";
+    document.getElementById("timeContainer").style.display = "block";
 
     if (liveTimer){
         clearInterval(liveTimer)
@@ -60,8 +61,10 @@ form.addEventListener("submit", (event) => {
     const birthDate = new Date (year, month, day, hours, minutes);
 
     liveTimer = setInterval(() => {
+        const footer = birthdateValue + " " + birthtimeValue;
         const now = new Date();
         const timeElapsed = now - birthDate;
+        document.getElementById("footer").textContent = "since " + footer + ".."
 
         //Rouding and calculating final time in different units
         const finalHours = Math.floor((timeElapsed / 3600000));
