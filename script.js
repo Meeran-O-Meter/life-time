@@ -22,6 +22,7 @@ form.addEventListener("submit", (event) => {
 
     form.style.display = "none";
     document.getElementById("timeContainer").style.display = "block";
+    document.getElementById("warningContainer").style.display = "none";
 
     if (liveTimer){
         clearInterval(liveTimer)
